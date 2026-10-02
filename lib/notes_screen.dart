@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:notes/note_controller.dart';
-import 'package:notes/note_dialog.dart';
+import 'note_dialog.dart';
+import 'notes_controller.dart';
 
 class NotesScreen extends StatefulWidget {
   const NotesScreen({super.key});

@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
-import 'package:notes/note_model.dart';
+
+import 'notes_model.dart';
 
 class NotesController extends ChangeNotifier {
   final List<NoteModel> _notes = [];
