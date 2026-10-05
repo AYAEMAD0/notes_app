@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
-
+import 'cubit/note_cubit.dart';
 import 'notes_model.dart';
 import 'notes_screen.dart';
 
@@ -20,9 +20,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: NotesScreen(),
+    return BlocProvider(
+      create: (_) => NotesCubit()..loadNotes(),
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: NotesScreen(),
+      ),
     );
   }
 }
